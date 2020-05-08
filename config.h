@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const unsigned int gappih    = 10;       /* horiz inner gap between windows */
@@ -17,7 +17,7 @@ static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
 static char normfgcolor[]           = "#bbbbbb";
 static char selfgcolor[]            = "#eeeeee";
-static char selbordercolor[]        = "#005577";
+static char selbordercolor[]        = "#770000";
 static char selbgcolor[]            = "#005577";
 static char *colors[][3] = {
        /*               fg           bg           border   */
