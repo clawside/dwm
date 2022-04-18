@@ -72,6 +72,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbordercolor, "-sf", selfgcolor, NULL };
 static const char *termcmd[]  = { "st", NULL };
 
+#include <X11/XF86keysym.h>
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
@@ -137,8 +138,18 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 
 
+
+	/* Screenshot's */
         { 0,                            XK_Print,       spawn,  SHCMD("maim | xclip -selection clipboard -t image/png") },
         { MODKEY,                       XK_Print,       spawn,  SHCMD("maim -s | xclip -selection clipboard -t image/png") },
+
+	/* Volume (planning to switch to pipewire */
+	{ 0, XF86XK_AudioLowerVolume, spawn,	SHCMD("amixer sset Master 5%-") },
+	{ 0, XF86XK_AudioRaiseVolume, spawn,	SHCMD("amixer sset Master 5%+") },
+	{ 0, XF86XK_AudioMute, 	     spawn,	SHCMD("amixer sset Master toggle") },
+
+	/* Browser */
+	{ MODKEY,	XK_w,		spawn,	SHCMD("ungoogled-chromium") },
 
 };
 
