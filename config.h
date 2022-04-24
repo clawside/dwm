@@ -143,13 +143,13 @@ static Key keys[] = {
         { 0,                            XK_Print,       spawn,  SHCMD("maim | xclip -selection clipboard -t image/png") },
         { MODKEY,                       XK_Print,       spawn,  SHCMD("maim -s | xclip -selection clipboard -t image/png") },
 
-	/* Volume (planning to switch to pipewire */
-	{ 0, XF86XK_AudioLowerVolume, spawn,	SHCMD("amixer sset Master 5%-") },
-	{ 0, XF86XK_AudioRaiseVolume, spawn,	SHCMD("amixer sset Master 5%+") },
-	{ 0, XF86XK_AudioMute, 	     spawn,	SHCMD("amixer sset Master toggle") },
+	/* Volume */
+	{ 0, XF86XK_AudioLowerVolume, spawn,	SHCMD("pamixer --allow-boost -d 5") },
+	{ 0, XF86XK_AudioRaiseVolume, spawn,	SHCMD("pamixer --allow-boost -i 5") },
+	{ 0, XF86XK_AudioMute, 	     spawn,	SHCMD("pamixer -t") },
 
 	/* Browser */
-	{ MODKEY,	XK_w,		spawn,	SHCMD("ungoogled-chromium") },
+	{ MODKEY,	XK_w,		spawn,	SHCMD("firefox") },
 
 };
 
