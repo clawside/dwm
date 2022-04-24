@@ -147,10 +147,10 @@ static Key keys[] = {
 	{ 0, XF86XK_AudioLowerVolume, spawn,	SHCMD("pamixer --allow-boost -d 5") },
 	{ 0, XF86XK_AudioRaiseVolume, spawn,	SHCMD("pamixer --allow-boost -i 5") },
 	{ 0, XF86XK_AudioMute, 	     spawn,	SHCMD("pamixer -t") },
-	{ MODKEY,	XK_v,	     spawn,	SHCMD("st -e pulsemixer") },
+	{ MODKEY,	XK_v,	     spawn,	SHCMD("$TERMINAL -e pulsemixer") },
 
 	/* Browser */
-	{ MODKEY,	XK_w,		spawn,	SHCMD("firefox") },
+	{ MODKEY,	XK_w,		spawn,	SHCMD("$BROWSER") },
 
 	/* ForkGram */
 	{ MODKEY,	XK_e,		spawn,	SHCMD("Forkgram") },
