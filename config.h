@@ -12,7 +12,7 @@ static const int smartgaps          = 0;        /* 1 means no outer gap when the
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Cousine NF:size=10", "NotoColorEmoji:pixelsize=10:antialias=true:autohint=true" };
-static const char dmenufont[]       = "monospace:size=10";
+static const char dmenufont[]       = "Cousine NF:size=10";
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
 static char normfgcolor[]           = "#bbbbbb";
