@@ -155,6 +155,11 @@ static Key keys[] = {
 	/* ForkGram */
 	{ MODKEY,	XK_e,		spawn,	SHCMD("Forkgram") },
 
+	/* MPC keys */
+	{ MODKEY,			XK_comma,	spawn,		SHCMD("mpc prev") },
+	{ MODKEY|ShiftMask,		XK_comma,	spawn,		SHCMD("mpc seek 0%") },
+	{ MODKEY,			XK_period,	spawn,		SHCMD("mpc next") },
+
 };
 
 /* button definitions */
