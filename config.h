@@ -139,23 +139,15 @@ static Key keys[] = {
 
 
 
-	/* Screenshot's */
         { 0,                            XK_Print,       spawn,  SHCMD("maim | xclip -selection clipboard -t image/png") },
         { MODKEY,                       XK_Print,       spawn,  SHCMD("maim -s | xclip -selection clipboard -t image/png") },
-
-	/* Volume */
 	{ 0, XF86XK_AudioLowerVolume, spawn,	SHCMD("pamixer --allow-boost -d 5") },
 	{ 0, XF86XK_AudioRaiseVolume, spawn,	SHCMD("pamixer --allow-boost -i 5") },
 	{ 0, XF86XK_AudioMute, 	     spawn,	SHCMD("pamixer -t") },
+	{ MODKEY,	XK_n,	     spawn,	SHCMD("$TERMINAL -e  ncmpcpp") },
 	{ MODKEY,	XK_v,	     spawn,	SHCMD("$TERMINAL -e pulsemixer") },
-
-	/* Browser */
 	{ MODKEY,	XK_w,		spawn,	SHCMD("$BROWSER") },
-
-	/* ForkGram */
 	{ MODKEY,	XK_e,		spawn,	SHCMD("Forkgram") },
-
-	/* MPC keys */
 	{ MODKEY,			XK_comma,	spawn,		SHCMD("mpc prev") },
 	{ MODKEY|ShiftMask,		XK_comma,	spawn,		SHCMD("mpc seek 0%") },
 	{ MODKEY,			XK_period,	spawn,		SHCMD("mpc next") },
